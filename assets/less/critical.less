@@ -12,7 +12,7 @@
         /* prevents overflow from the lines extending past the screen width */
         overflow: hidden;
         /* changes on tablet */
-        padding: 0 (16/16rem);
+        padding: (300/16rem) (16/16rem);
         padding-bottom: (100/16rem);
         font-family: "Roboto", "Arial", sans-serif;
         /* Centers button */
@@ -48,6 +48,10 @@
         }
 
         .cs-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             position: relative;
             margin: auto;
             max-width: (1280/16em);
@@ -55,34 +59,21 @@
             /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
             /* 144px - 280px - leaving extra space for the navigation */
             /* changes on tablet */
-            padding: clamp(9em, 25.95vw, 17.5em) 0;
-
-            &:before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                /* Left Line */
-                content: "";
-                opacity: 1;
-                display: block;
-                background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* FF3.6-15 */
-                background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-                height: 100%;
-                width: 1px;
+            padding: clamp(9em, 25.95vw, 17.5em) 0 0 0;
             }
         }
 
         .cs-flex-group {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            margin: auto;
+            justify-content: start;
+            align-items: center;
+            margin: 0;
             /* 60px - 220px */
             margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
             /* 464px - 562px */
             max-width: clamp(29em, 60vw, 35.125em);
-            width: 80vw;
+            width: 1fr;
             box-sizing: border-box;
         }
 
@@ -93,9 +84,11 @@
         }
 
         .cs-title {
-            width: 100%;
+            width: (60%);
+            text-wrap: wrap;
+            margin-bottom: 0;
             color: var(--bodyTextColorWhite);
-            text-align: center;
+            text-align: start;
         }
 
         .cs-text {
@@ -104,11 +97,11 @@
             /* 40px - 48px */
             margin-bottom: clamp(2.5rem, 4vw, 3rem);
             color: var(--bodyTextColorWhite);
-            text-align: center;
+            text-align: start;
         }
 
         .cs-button-solid {
-            margin-bottom: (16/16rem);
+            width: (160/16rem);
             height: initial;
             line-height: clamp(2.875em, 5.5vw, 3.5em);
         }
@@ -136,7 +129,6 @@
 
             .cs-img {
                 display: block;
-                margin-right: (12/16rem);
             }
 
             &:before {
@@ -163,8 +155,7 @@
                 }
             }
         }
-    }
-
+}
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #hero {
@@ -186,11 +177,6 @@
                 height: 100%;
                 width: 1px;
             }
-        }
-
-        .cs-button-solid {
-            margin-right: (20/16rem);
-            margin-bottom: 0;
         }
     }
 }
@@ -227,18 +213,26 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
     .services {
-        z-index: 100;
-        position: relative;
-        border-top: (6/16em) solid var(--primary);
         border-radius: (5/16em);
         margin: (50/16em);
         background: #fff;
-        max-width: (1320/16em);
-        padding: (50/16em) (20/16em);
+        padding: (30/16em) (30/16em);
         box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    
+        .cs-button-solid {
+            
+        }
+        
         .card {
-            display: block;
+            border-style: solid;
+            border-width: (2/16em);
+            border-radius: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin: auto;
+            padding: (10/16em) 0;
+            gap: (10/16em);
             margin-bottom: (50/16em);
             max-width: (357/16em);
             width: 100%;
@@ -247,20 +241,14 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border-radius: 50%;
                 margin: auto;
-                margin-bottom: (23/16em);
-                background: var(--primary);
-                height: (88/16em);
-                width: (88/16em);
 
                 img {
-                    height: (48/16em);
-                    width: (48/16em);
+                    height: (100%);
+                    width: (100%);
                 }
             }
             h2 {
-                margin-bottom: (13/20em);
                 font-size: (32/16em);
                 line-height: (27/20em);
                 font-weight: 700;
@@ -285,9 +273,9 @@
     .services {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        width: 98%;
+        align-items: space-between;
         font-size: ~"min(1.8vw, 1em)";
+        gap: (10/16em);
 
         .card {
             margin: 0;
