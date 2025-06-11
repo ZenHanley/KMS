@@ -20,6 +20,10 @@
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
   }
+  :root mark.primary {
+    color: var(--primary);
+    background: none;
+  }
   .cs-topper {
     display: block;
     margin-bottom: 0.25rem;
@@ -42,6 +46,15 @@
     text-align: inherit;
   }
   .cs-text {
+    margin: 0;
+    max-width: 40.625rem;
+    width: 100%;
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    text-align: inherit;
+  }
+  .cs-text-top {
     margin: 0;
     max-width: 40.625rem;
     width: 100%;
@@ -78,6 +91,7 @@
   .cs-button-solid:before {
     z-index: -1;
     position: absolute;
+    border-radius: 1rem;
     top: 0;
     left: 0;
     content: "";

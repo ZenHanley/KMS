@@ -55,26 +55,35 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
-
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <h1 class="cs-title"> High Quality Custom Made Local Signs </h1>
-                <p class="cs-text"> 30+ Years Expirence </p>
+<section id="hero-229">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            <h1 class="cs-title">High Quality</h1>
+            <h1 class="cs-title">Custom Made</h1>
+            <h1 class="cs-title">Local Signs</h1>
+            <p class="cs-text">
+                30+ Years of Experience.
+            </p>
+            <div class="cs-button-group">
+                <a href="" class="cs-button-solid cs-button">Explore More</a>
             </div>
-            <a href="/about" class="cs-button-solid"> Contact Us </a>
         </div>
+    </div>
+ 
+    <!-- Background Image -->
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="https://shorturl.at/o9l4n">
 
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section>
+        <source media="(min-width: 601px)"  srcset="https://shorturl.at/o9l4n">
+
+        <img loading="lazy" decoding="async" src="https://shorturl.at/o9l4n" alt="landing" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+                                
 
     <!-- ============================================ -->
     <!--                    Signs                     -->
@@ -142,19 +151,17 @@ eleventyNavigation:
 
     <section id="sbs">
         <div class="cs-container">
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
                 <h2 class="cs-title">Who Are We?</h2>
-                <p class="cs-text">
-                    It has been said, "You get what you pay for". 
+                <p class="cs-text-top">
+                    It has been said "You get what you pay for". 
                 </p>
                 <p class="cs-text">
-                    You can expect from us Quality at competitive prices.Please consider our designs to make your signs work,made easy to read and look great as signage or in print.
+                    You can expect from us 
+                    <!-- Mark adds Primary Website Color to the word -->
+                    <mark class="primary">Quality</mark>
+                    at competitive prices. Please consider our designs to make your signs work, made easy to read and look great as signage or in print.
                 </p>
-                </div>
                 <a href="/about" class="cs-button-solid">Find Out More</a>
-            </div>
         </div>
     </section>
 

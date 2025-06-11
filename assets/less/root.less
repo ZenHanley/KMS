@@ -15,6 +15,10 @@
         --headerColor: #262525;
         --bodyTextColor: #1E1E1E;
         --bodyTextColorWhite: #fafbfc;
+        mark.primary {
+            color: var(--primary);
+            background: none;
+        }
 
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -60,6 +64,16 @@
         text-align: inherit;
     }
 
+    .cs-text-top {
+        margin: 0;
+        max-width: 40.625rem;
+        width: 100%;
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        color: var(--bodyTextColor);
+        text-align: inherit;
+    }
+
     // Button - can be replaced using CodeStitch's "Button" Stitches
     .cs-button-solid {
         z-index: 1;
@@ -92,6 +106,7 @@
         &:before {
             z-index: -1;
             position: absolute;
+            border-radius: (16/16rem);
             top: 0;
             left: 0;
             content: "";
