@@ -61,22 +61,17 @@
   body.dark-mode #sbs .cs-topper {
     color: var(--primaryLight);
   }
+  body.dark-mode #sbs .cs-button-solid,
+  body.dark-mode #sbs .cs-text-top,
   body.dark-mode #sbs .cs-title,
   body.dark-mode #sbs .cs-text,
   body.dark-mode #sbs .cs-h3,
   body.dark-mode #sbs .cs-flex-p,
   body.dark-mode #sbs .cs-name {
-    color: var(--bodyTextColorWhite);
+    color: var(--dark);
   }
   body.dark-mode #sbs .cs-flex-group {
     background-color: var(--accent);
-  }
-  body.dark-mode #sbs .cs-job {
-    opacity: 0.8;
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #sbs .cs-quote-icon {
-    opacity: 0.2;
   }
 }
 /*-- -------------------------- -->
@@ -86,116 +81,107 @@
 @media only screen and (min-width: 0rem) {
   #reviews {
     padding: var(--sectionPadding);
-    /* Centers the button */
-    text-align: center;
   }
   #reviews .cs-container {
-    margin: auto;
-    max-width: 69rem;
     width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #reviews .cs-topper {
-    margin-bottom: 1rem;
+  #reviews .cs-content {
+    /* set text align to left if content needs to be left aligned */
     text-align: center;
-  }
-  #reviews .cs-title {
-    max-width: 43.75rem;
-    text-align: center;
-  }
-  #reviews .cs-text {
-    /* 88px - 104px */
-    margin-bottom: clamp(5.5em, 10.2vw, 6.5em);
-    max-width: 40.625rem;
-    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
   }
   #reviews .cs-card-group {
-    /* 48px - 64px */
-    margin: 0 auto clamp(3rem, 5vw, 4rem);
+    width: 100%;
+    margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25rem;
   }
   #reviews .cs-item {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 0.25rem;
-    margin: 0 auto 4rem;
-    background: #fff;
-    max-width: 33.875rem;
-    width: 100%;
-    /* Prevents padding from affecting height & width */
-    box-sizing: border-box;
-    /* Padding L & R - 16px - 32px */
-    padding: 3.75rem clamp(1rem, 3.2vw, 2rem) 0;
-    /* 32px - 40px */
-    padding-bottom: clamp(2rem, 5.4vw, 2.5rem);
     list-style: none;
-    text-align: left;
-    box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 25.8125rem;
+    margin: 0;
+    padding: 0;
   }
-  #reviews .cs-item:last-of-type {
-    margin-bottom: 0;
-  }
-  #reviews .cs-item-img {
-    position: absolute;
-    top: calc(-40 / 16 * 1rem);
-    height: 5rem;
-    width: 5rem;
-  }
-  #reviews .cs-item-p {
-    border-bottom: 1px solid #e8e9ec;
-    margin: 0 0 1.25rem;
-    padding-bottom: 1.25rem;
-    font-size: 1rem;
-    line-height: 1.5em;
-    color: var(--bodyTextColor);
-  }
-  #reviews .cs-reviewer {
+  #reviews .cs-img {
+    width: 4.25rem;
+    height: 4.25rem;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
     display: block;
-    margin: 0 auto 0 0;
-    width: 40%;
-    font-size: 1rem;
-    line-height: 1.5em;
+  }
+  #reviews .cs-name {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    text-align: center;
     font-weight: 700;
+    margin: 0;
     color: var(--headerColor);
+    display: block;
   }
   #reviews .cs-desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: center;
+    margin: 0 0 1rem;
+    color: #7d799c;
     display: block;
-    font-size: 0.875rem;
-    font-weight: 400;
-    color: var(#353535);
   }
-  #reviews .cs-item-stars {
-    height: 1rem;
-    width: 6rem;
+  #reviews .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    text-align: center;
+    line-height: 1.5em;
+    margin: auto;
+    color: var(--bodyTextColor);
+  }
+  #reviews:hover:before {
+    width: 100%;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #reviews .cs-card-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    row-gap: 2.5rem;
   }
   #reviews .cs-item {
-    /* reset margin so it won't interfere with flexbox */
-    margin: 0;
+    /* we do this so it's stackable. You can add new any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of reviews, they don't stay centered.  They align with their grid lines. If you want 4 reviews in a row, lower the width under 23% to get the desired sizes fit 4 in a row and then stack when you add more*/
+    width: clamp(31.5%, 30vw, 32.3%);
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #reviews .cs-title,
-  body.dark-mode #reviews .cs-text,
-  body.dark-mode #reviews .cs-item-p,
-  body.dark-mode #reviews .cs-reviewer {
+  body.dark-mode #reviews-62 .cs-topper {
+    color: var(--primaryLight);
+  }
+  body.dark-mode #reviews-62 .cs-title,
+  body.dark-mode #reviews-62 .cs-text,
+  body.dark-mode #reviews-62 .cs-name,
+  body.dark-mode #reviews-62 .cs-desc,
+  body.dark-mode #reviews-62 .cs-item-text {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #reviews .cs-item {
-    background: var(--medium);
-  }
-  body.dark-mode #reviews .cs-desc {
-    color: var(--primaryLight);
+  body.dark-mode #reviews-62 .cs-item-text,
+  body.dark-mode #reviews-62 .cs-text {
+    opacity: 0.8;
   }
 }

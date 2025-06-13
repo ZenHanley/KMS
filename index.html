@@ -59,35 +59,31 @@ eleventyNavigation:
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-229">
+<section id="Hero">
     <div class="cs-container">
         <div class="cs-flex-group">
             <h1 class="cs-title">High Quality</h1>
             <h1 class="cs-title">Custom Made</h1>
             <h1 class="cs-title">Local Signs</h1>
             <p class="cs-text">
-                30+ Years of Experience.
+                30+ Year of Experience
             </p>
-            <div class="cs-button-group">
-                <a href="" class="cs-button-solid cs-button">Explore More</a>
-            </div>
+            <a href="Contact" class="cs-button-solid">Contact Us</a>
         </div>
     </div>
- 
-    <!-- Background Image -->
-    <picture class="cs-picture">
-        <source media="(max-width: 600px)" srcset="https://shorturl.at/o9l4n">
-
-        <source media="(min-width: 601px)"  srcset="https://shorturl.at/o9l4n">
-
-        <img loading="lazy" decoding="async" src="https://shorturl.at/o9l4n" alt="landing" width="2250" height="1500" aria-hidden="true">
+    <!--Background Color-->
+    <picture class="cs-background">
+        <source media="(min-width: 600px)" srcset="http://localhost:8080/assets/images/landing.jpg">
+        <source media="(min-width: 601px)" srcset="http://localhost:8080/assets/images/landing.jpg">
+        <img aria-hidden="true" decoding="async" src="http://localhost:8080/assets/images/landing.jpg" alt="meeting" width="2250" height="1500">
     </picture>
 </section>
                                 
+                                
 
-    <!-- ============================================ -->
-    <!--                    Signs                     -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                    Signs                     -->
+<!-- ============================================ -->
 
     <section id="services" class="services">
         <!-- Get Icons From flaticon.com -->
@@ -145,9 +141,9 @@ eleventyNavigation:
         </div>
     </section>
 
-    <!-- ============================================ -->
-    <!--                 Who Are We?                  -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                 Who Are We?                  -->
+<!-- ============================================ -->
 
     <section id="sbs">
         <div class="cs-container">
@@ -165,76 +161,46 @@ eleventyNavigation:
         </div>
     </section>
 
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
 
-    <section id="reviews">
+    <section id="reviews" class="cs-reviews">
         <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
-            <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-            </p>
+            <div class="cs-content">
+                <span class="cs-topper">Our Reviews</span>
+                <h2 class="cs-title">Words From Our Customers</h2>
+                <p class="cs-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
             <ul class="cs-card-group">
-                <!-- Review 1 -->
                 <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
+                    <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile1.png" alt="profile" width="68" height="68">
+                    <span class="cs-name">John Doe</span>
+                    <span class="cs-desc">Texas</span>
+                    <p class="cs-item-text">
+                        Proin massa eros, quis fringilla sagittis. Euismod scelerisque varius sed nec consequat, turpis.
                     </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
                 </li>
-                <!-- Review 2 -->
                 <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
+                    <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.png" alt="profile" width="68" height="68">
+                    <span class="cs-name">Jane Smith</span>
+                    <span class="cs-desc">California</span>
+                    <p class="cs-item-text">
+                        Proin massa eros, quis fringilla sagittis. Euismod scelerisque varius sed nec consequat, turpis.
                     </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
+                </li>
+                <li class="cs-item">
+                    <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png" alt="profile" width="68" height="68">
+                    <span class="cs-name">Thomas Madden</span>
+                    <span class="cs-desc">Texas</span>
+                    <p class="cs-item-text">
+                        Proin massa eros, quis fringilla sagittis. Euismod scelerisque varius sed nec consequat, turpis.
+                    </p>
                 </li>
             </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
+            <a aria-label="read more reviews" href="" class="cs-button-solid">Read More</a>
         </div>
     </section>
 

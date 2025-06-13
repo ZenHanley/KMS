@@ -16,7 +16,7 @@
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-    --bodyFontSize: 1rem;
+    --bodyFontSize: clamp(1.3rem, 3.5vw, 1.3rem);
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
   }
@@ -761,7 +761,7 @@
     justify-content: flex-end;
     align-items: center;
     margin: auto;
-    max-width: 80rem;
+    max-width: 85rem;
     width: 100%;
     gap: 1.5rem;
   }
@@ -1121,7 +1121,7 @@
   #footer .right-section .lists ul li a:hover {
     color: var(--primary);
   }
-  #footer .right-section .lists ul h2 {
+  #footer .right-section .lists h2 {
     position: relative;
     margin-bottom: 2.3125rem;
     text-transform: uppercase;
@@ -1130,7 +1130,7 @@
     font-weight: bold;
     color: #fff;
   }
-  #footer .right-section .lists ul h2:before {
+  #footer .right-section .lists h2:before {
     position: absolute;
     bottom: calc(-16 / 16 * 1rem);
     left: 0;
@@ -1141,27 +1141,17 @@
     height: 0.125rem;
     width: 6.0625rem;
   }
-  #footer .right-section .lists ul:nth-of-type(3) {
+  #footer .right-section .lists:nth-of-type(3) {
     margin-top: 3.125rem;
   }
-  #footer .right-section .lists ul:nth-of-type(3) li {
+  #footer .right-section .lists:nth-of-type(3) li {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 1rem;
   }
-  #footer .right-section .lists ul:nth-of-type(3) li:last-of-type {
+  #footer .right-section .lists:nth-of-type(3) li:last-of-type {
     margin-bottom: 0;
-  }
-  #footer .right-section .buttons {
-    display: flex;
-    justify-content: center;
-  }
-  #footer .right-section .cs-button-solid {
-    margin: 0;
-    height: 3.3125rem;
-    width: 15.625rem;
-    padding-top: 0.1875rem;
   }
   #footer .credit {
     margin: auto;
@@ -1247,9 +1237,6 @@
   }
   #footer .right-section .lists ul:nth-of-type(3) li:first-of-type {
     margin-bottom: 0;
-  }
-  #footer .right-section .buttons {
-    justify-content: flex-start;
   }
   #footer .credit .copyright {
     display: inline-block;
