@@ -9,9 +9,7 @@
     // Website colors
     :root {
         --primary: #D4E169;
-        --primaryLight: #ffd675;
         --secondary: #2E99CE;
-        --secondaryLight: #2E99CE;
         --headerColor: #262525;
         --bodyTextColor: #1E1E1E;
         --bodyTextColorWhite: #fafbfc;
@@ -77,12 +75,14 @@
     // Button - can be replaced using CodeStitch's "Button" Stitches
     .cs-button-solid {
         z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-self: center;
         position: relative;
-        display: border-box;
         border-radius: (16/16rem);
-        height: (50/16rem);
+        height: (40/16rem);
         background-color: var(--primary);
-        width: auto;
+        width: fit-content;
         padding: 0 (30/16rem);
         text-decoration: none;
         text-transform: uppercase;
@@ -1106,12 +1106,12 @@
 }
 
 /*-- -------------------------- -->
-<---    Final Call To Action    -->
+<---      Call To Action        -->
 <--- -------------------------- -*/
 
 /* Mobile */
 @media only screen and (min-width: 0rem) {
-    #cta {
+    #cs-cta {
         position: relative;
         padding: (50/16rem) 0;
 
@@ -1174,14 +1174,14 @@
 
 /* Small Desktop */
 @media only screen and (min-width: 64rem) {
-    #cta {
+    #cs-cta {
         padding: (168/16rem) 0;
     }
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
-    #cta {
+    #cs-cta {
         position: relative;
         margin-top: (100/16rem);
         .container {
@@ -1232,7 +1232,7 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #cta {
+        #cs-cta {
             &:after {
                 display: none;
             }
@@ -1246,9 +1246,17 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #cs-footer-308 {
+    #cs-footer {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        /* 120px - 200px */
+        padding-top: clamp(7.5rem, 15vw, 12.5rem);
+        position: relative;
+
+        .cs-text {
+            width: 100%;
+            color: var(--bodyTextColorWhite);
+        }
+
 
         .cs-container {
             width: 100%;
@@ -1269,7 +1277,7 @@
         }
 
         .cs-logo {
-            width: (178/16rem);
+            width: (197/16rem);
             height: auto;
             display: block;
             margin-bottom: (24/16rem);
@@ -1336,7 +1344,7 @@
             }
 
             &:hover {
-                color: var(--primary);
+                color: var(--secondary);
                 &:before {
                     width: 100%;
                 }
@@ -1371,15 +1379,71 @@
             text-decoration: none;
             transition: color 0.3s;
             &:hover {
-                color: var(--primary);
+                color: var(--secondary);
             }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &:before {
+                /* background color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: -moz-linear-gradient(
+                    left,
+                    rgba(26, 26, 26, 0.94) 0%,
+                    rgba(26, 26, 26, 1) 100%
+                ); /* FF3.6-15 */
+                background: -webkit-linear-gradient(
+                    left,
+                    rgba(26, 26, 26, 0.94) 0%,
+                    rgba(26, 26, 26, 1) 100%
+                ); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(
+                    to right,
+                    rgba(26, 26, 26, 0.94) 0%,
+                    rgba(26, 26, 26, 1) 100%
+                ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                opacity: 0.97;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+            }
+        }
+
+        .cs-graphic {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #cs-footer-308 {
+    #cs-footer {
         .cs-container {
             row-gap: 0;
             flex-direction: row;
@@ -1395,7 +1459,7 @@
 
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #cs-footer-308 {
+    #cs-footer {
         .cs-container {
             max-width: (1280/16rem);
             flex-wrap: nowrap;
@@ -1415,12 +1479,19 @@
             width: 100%;
         }
     }
-}                       
-  
+}
+
+/* Large Desktop - 1800px */
+@media only screen and (min-width: 112.5rem) {
+    #cs-footer {
+        padding-top: 12vw;
+    }
+}
+
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #footer {
+        #cs-footer {
             background: #061623;
         }
     }

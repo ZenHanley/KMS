@@ -8,43 +8,37 @@
 @media only screen and (min-width: 0rem) {
     #Hero {
         /* 144px - 300px - leaving extra space for the navigation */
-        padding: clamp(9rem, 25.95vw, 18.75rem) (16/16rem) 0;
-        /* 130px - 175px */
-        padding-bottom: clamp(8.125rem, 12.5vw, 10.9375rem);
+        padding: clamp(9rem, 10vw, 18.75rem) (15/16rem) 0;
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
         /* clips the color overlay so it doesn't cause an overflow */
         overflow: hidden;
 
         .cs-container {
-            width: 100%;
-            max-width: (1280/16rem);
-            height: auto;
-            margin: auto;
+            width: 50%;
+            max-width: (2500/16rem);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
         }
 
         .cs-flex-group {
             text-align: left;
             /* changed to at tablet */
             max-width: (545/16rem);
-            margin: (0/16rem) (0/16rem) (2.5rem/16rem) (0/16rem);
+            margin: (0/16rem) (0/16rem) (50rem/16rem) (0/16rem);
         }
 
         .cs-title {
             /* 39px - 61px */
+            min-width: (200/16rem);
             font-size: clamp(2rem, 6.7vw, 3rem);
             font-weight: 900;
             line-height: 1.2em;
             text-align: inherit;
             max-width: (700/16rem);
             /* 16px - 32px */
-            margin: 0 0 clamp(0.5rem, 2vw, 0.5rem) 0;
             color: var(--bodyTextColorWhite);
             position: relative;
         
@@ -57,21 +51,12 @@
             width: 100%;
             max-width: (650/16rem);
             /* 40px - 64px */
-            margin: 0 0 clamp(2.5rem, 6.3vw, 4rem);
+            margin: 0 0 10rem 0;
             color: var(--bodyTextColorWhite);
         }
 
         .cs-button-solid {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            width: (70%);
-            /* 40px - 64px */
-            height: clamp(2.5rem, 6.3vw, 4rem);
-            /* 16px - 32px */
-            padding: 0 clamp(1rem, 4vw, 2rem);
-            }
+            justify-self: unset;
         }
 
         .cs-background {
@@ -85,16 +70,16 @@
 
             &:before {
                 /* Blur Overlay */
+                z-index: 1;
                 content: "";
                 position: absolute;
                 display: block;
-                height: (1250/16rem);
-                width: (3000/16rem);
+                height: 100%;
+                width: 60%;
                 background: rgba(12, 12, 12, 0.7);
                 -webkit-backdrop-filter: blur(5px);
                 backdrop-filter: blur(5px);
                 right: 40%;
-                z-index: 1;
 
             }
 
@@ -108,15 +93,19 @@
                 object-fit: cover;
             }
         }
+    }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #Hero {
-        padding-bottom: clamp(20rem, 12.5vw, 23rem);
         .cs-content {
             width: 48%;
             margin-top: (0/16rem);
+        }
+
+        .cs-flex-group {
+            padding: 0 0 0 (15/16rem); 
         }
 
         .cs-background {
@@ -131,10 +120,31 @@
 /* Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
     #Hero {
-        padding-bottom: clamp(25em, 12.5vw, 25em);
+        padding: (150/16rem) (15/16rem) 0 (15/16rem);
+        .cs-button-solid {
+            
+        }
+
+        .cs-title {
+            font-size: clamp(5rem, 6.7vw, 3.5rem);
+        }
+
+        .cs-text {
+            font-size: clamp(2.5rem, 6.7vw, 1rem);
+        }
+
+        .cs-content {
+            width: 50%;
+            margin-top: (0/16rem);
+        }
+
+        .cs-container {
+            width: 40%;
+        }
+
         .cs-background {
             &:before {
-                right: 50%;
+                right: 60%;
             }
         }
     }
@@ -179,6 +189,7 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
     .services {
+        z-index: 3;
         border-radius: (5/16em);
         background: #fff;
         padding: (30/16em) (30/16em);

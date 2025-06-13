@@ -6,9 +6,7 @@
 @media only screen and (min-width: 0rem) {
   :root {
     --primary: #D4E169;
-    --primaryLight: #ffd675;
     --secondary: #2E99CE;
-    --secondaryLight: #2E99CE;
     --headerColor: #262525;
     --bodyTextColor: #1E1E1E;
     --bodyTextColorWhite: #fafbfc;
@@ -65,12 +63,14 @@
   }
   .cs-button-solid {
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
     position: relative;
-    display: border-box;
     border-radius: 1rem;
-    height: 3.125rem;
+    height: 2.5rem;
     background-color: var(--primary);
-    width: auto;
+    width: fit-content;
     padding: 0 1.875rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -933,18 +933,18 @@
   }
 }
 /*-- -------------------------- -->
-<---    Final Call To Action    -->
+<---      Call To Action        -->
 <--- -------------------------- -*/
 /* Mobile */
 @media only screen and (min-width: 0rem) {
-  #cta {
+  #cs-cta {
     position: relative;
     padding: 3.125rem 0;
   }
-  #cta .container {
+  #cs-cta .container {
     text-align: center;
   }
-  #cta picture {
+  #cs-cta picture {
     z-index: -2;
     position: absolute;
     top: 0;
@@ -952,7 +952,7 @@
     height: 100%;
     width: 100%;
   }
-  #cta picture img {
+  #cs-cta picture img {
     position: absolute;
     top: 0;
     left: 0;
@@ -960,7 +960,7 @@
     width: 100%;
     object-fit: cover;
   }
-  #cta .title {
+  #cs-cta .title {
     position: relative;
     margin-bottom: 2.25rem;
     font-size: min(9vw, 3rem);
@@ -969,7 +969,7 @@
     color: #fff;
     text-align: center;
   }
-  #cta p {
+  #cs-cta p {
     opacity: 1;
     margin: auto;
     margin-bottom: 2.25rem;
@@ -978,7 +978,7 @@
     color: #fff;
     text-align: center;
   }
-  #cta:before {
+  #cs-cta:before {
     z-index: -1;
     position: absolute;
     top: 0;
@@ -993,26 +993,26 @@
 }
 /* Small Desktop */
 @media only screen and (min-width: 64rem) {
-  #cta {
+  #cs-cta {
     padding: 10.5rem 0;
   }
 }
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
-  #cta {
+  #cs-cta {
     position: relative;
     margin-top: 6.25rem;
   }
-  #cta .container {
+  #cs-cta .container {
     margin: auto;
     width: 90.0625%;
   }
-  #cta picture {
+  #cs-cta picture {
     left: 50%;
     transform: translateX(-50%);
     width: 90.0625%;
   }
-  #cta picture:before {
+  #cs-cta picture:before {
     z-index: 1;
     position: absolute;
     top: 0;
@@ -1024,10 +1024,10 @@
     height: 100%;
     width: 100%;
   }
-  #cta:before {
+  #cs-cta:before {
     display: none;
   }
-  #cta:after {
+  #cs-cta:after {
     z-index: -3;
     position: absolute;
     bottom: 0;
@@ -1046,7 +1046,7 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #cta:after {
+  body.dark-mode #cs-cta:after {
     display: none;
   }
 }
@@ -1055,12 +1055,18 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #cs-footer-308 {
+  #cs-footer {
     padding: var(--sectionPadding);
-    background-color: #1a1a1a;
+    /* 120px - 200px */
+    padding-top: clamp(7.5rem, 15vw, 12.5rem);
+    position: relative;
     /* Navigation Links */
   }
-  #cs-footer-308 .cs-container {
+  #cs-footer .cs-text {
+    width: 100%;
+    color: var(--bodyTextColorWhite);
+  }
+  #cs-footer .cs-container {
     width: 100%;
     /* reset on desktop */
     max-width: 43.75rem;
@@ -1071,25 +1077,25 @@
     flex-wrap: wrap;
     gap: 2.5rem;
   }
-  #cs-footer-308 .cs-logo-group {
+  #cs-footer .cs-logo-group {
     /* takes up all the space, lets the other ul's wrap below it */
     width: 100%;
     position: relative;
   }
-  #cs-footer-308 .cs-logo {
-    width: 11.125rem;
+  #cs-footer .cs-logo {
+    width: 12.3125rem;
     height: auto;
     display: block;
     margin-bottom: 1.5rem;
   }
-  #cs-footer-308 .cs-logo-img {
+  #cs-footer .cs-logo-img {
     width: 100%;
     height: auto;
   }
-  #cs-footer-308 .cs-logo-img.dark {
+  #cs-footer .cs-logo-img.dark {
     display: none;
   }
-  #cs-footer-308 .cs-nav {
+  #cs-footer .cs-nav {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -1099,13 +1105,13 @@
     flex-direction: column;
     gap: 0.75rem;
   }
-  #cs-footer-308 .cs-nav-li {
+  #cs-footer .cs-nav-li {
     list-style: none;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  #cs-footer-308 .cs-header {
+  #cs-footer .cs-header {
     font-size: 1rem;
     line-height: 1.2em;
     text-transform: uppercase;
@@ -1115,7 +1121,7 @@
     position: relative;
     display: block;
   }
-  #cs-footer-308 .cs-nav-link {
+  #cs-footer .cs-nav-link {
     font-size: 1rem;
     text-decoration: none;
     line-height: 1.5em;
@@ -1124,7 +1130,7 @@
     display: inline-block;
     transition: color 0.3s;
   }
-  #cs-footer-308 .cs-nav-link:before {
+  #cs-footer .cs-nav-link:before {
     /* underline */
     content: "";
     width: 0%;
@@ -1137,18 +1143,18 @@
     left: 0;
     transition: width 0.3s;
   }
-  #cs-footer-308 .cs-nav-link:hover {
-    color: var(--primary);
+  #cs-footer .cs-nav-link:hover {
+    color: var(--secondary);
   }
-  #cs-footer-308 .cs-nav-link:hover:before {
+  #cs-footer .cs-nav-link:hover:before {
     width: 100%;
   }
-  #cs-footer-308 .cs-icon {
+  #cs-footer .cs-icon {
     width: 1.5rem;
     height: auto;
     margin-right: 0.75rem;
   }
-  #cs-footer-308 .cs-bottom {
+  #cs-footer .cs-bottom {
     max-width: 80rem;
     margin: auto;
     margin-top: 2rem;
@@ -1158,54 +1164,103 @@
     justify-content: center;
     align-items: center;
   }
-  #cs-footer-308 .cs-copyright,
-  #cs-footer-308 .cs-copyright-link {
+  #cs-footer .cs-copyright,
+  #cs-footer .cs-copyright-link {
     font-size: 1rem;
     line-height: 1.5em;
     color: var(--bodyTextColorWhite);
   }
-  #cs-footer-308 .cs-copyright-link {
+  #cs-footer .cs-copyright-link {
     text-decoration: none;
     transition: color 0.3s;
   }
-  #cs-footer-308 .cs-copyright-link:hover {
-    color: var(--primary);
+  #cs-footer .cs-copyright-link:hover {
+    color: var(--secondary);
+  }
+  #cs-footer .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #cs-footer .cs-background:before {
+    /* background color overlay */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: -moz-linear-gradient(left, rgba(26, 26, 26, 0.94) 0%, #1a1a1a 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(26, 26, 26, 0.94) 0%, #1a1a1a 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(26, 26, 26, 0.94) 0%, #1a1a1a 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    opacity: 0.97;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #cs-footer .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+  }
+  #cs-footer .cs-graphic {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #cs-footer-308 .cs-container {
+  #cs-footer .cs-container {
     row-gap: 0;
     flex-direction: row;
     justify-content: space-between;
     row-gap: 2.5rem;
   }
-  #cs-footer-308 .cs-nav {
+  #cs-footer .cs-nav {
     width: auto;
   }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #cs-footer-308 .cs-container {
+  #cs-footer .cs-container {
     max-width: 80rem;
     flex-wrap: nowrap;
     /* align everything to the right */
     justify-content: flex-end;
     column-gap: 5.25rem;
   }
-  #cs-footer-308 .cs-logo-group {
+  #cs-footer .cs-logo-group {
     width: 30%;
     max-width: 24.1875rem;
     /* pushes away from everything to the right */
     margin-right: auto;
   }
-  #cs-footer-308 .cs-text {
+  #cs-footer .cs-text {
     width: 100%;
+  }
+}
+/* Large Desktop - 1800px */
+@media only screen and (min-width: 112.5rem) {
+  #cs-footer {
+    padding-top: 12vw;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #footer {
+  body.dark-mode #cs-footer {
     background: #061623;
   }
 }

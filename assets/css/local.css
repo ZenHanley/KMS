@@ -1,14 +1,14 @@
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---       Who Are We?          -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #sbs {
+  #war {
     background-color: #2E99CE;
     padding: var(--sectionPadding);
   }
-  #sbs .cs-container {
+  #war .cs-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,28 +19,28 @@
     width: 100%;
     row-gap: 1.25rem;
   }
-  #sbs .cs-title {
+  #war .cs-title {
     display: flex;
     justify-content: center;
     color: var(--bodyTextColorWhite);
     max-width: 50rem;
     text-align: left;
   }
-  #sbs .cs-text-top {
+  #war .cs-text-top {
     letter-spacing: 0.05rem;
     color: var(--bodyTextColorWhite);
     max-width: 46.875rem;
     text-align: left;
     margin: 0;
   }
-  #sbs .cs-text {
+  #war .cs-text {
     margin: 0 0 1rem 0;
     letter-spacing: 0.09rem;
     color: var(--bodyTextColorWhite);
     max-width: 46.875rem;
     text-align: left;
   }
-  #sbs .cs-button-solid {
+  #war .cs-button-solid {
     height: auto;
     width: 12.5rem;
     color: var(--bodyTextColorWhite);
@@ -80,6 +80,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #reviews {
+    background-color: var(--bodyTextColorWhite);
     padding: var(--sectionPadding);
   }
   #reviews .cs-container {
@@ -112,11 +113,16 @@
     gap: 1.25rem;
   }
   #reviews .cs-item {
+    border-radius: 5%;
+    padding: 1rem;
+    background-color: #AFB8C2;
+    margin: 0rem 0.625rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     list-style: none;
     width: 100%;
     max-width: 25.8125rem;
-    margin: 0;
-    padding: 0;
   }
   #reviews .cs-img {
     width: 4.25rem;
@@ -150,9 +156,6 @@
     margin: auto;
     color: var(--bodyTextColor);
   }
-  #reviews:hover:before {
-    width: 100%;
-  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
@@ -170,18 +173,18 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #reviews-62 .cs-topper {
-    color: var(--primaryLight);
+  body.dark-mode #reviews {
+    background-color: var(--dark);
   }
-  body.dark-mode #reviews-62 .cs-title,
-  body.dark-mode #reviews-62 .cs-text,
-  body.dark-mode #reviews-62 .cs-name,
-  body.dark-mode #reviews-62 .cs-desc,
-  body.dark-mode #reviews-62 .cs-item-text {
+  body.dark-mode #reviews .cs-title,
+  body.dark-mode #reviews .cs-text,
+  body.dark-mode #reviews .cs-name,
+  body.dark-mode #reviews .cs-desc,
+  body.dark-mode #reviews .cs-item-text {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #reviews-62 .cs-item-text,
-  body.dark-mode #reviews-62 .cs-text {
+  body.dark-mode #reviews .cs-item-text,
+  body.dark-mode #reviews .cs-text {
     opacity: 0.8;
   }
 }

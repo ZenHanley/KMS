@@ -1,12 +1,12 @@
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---       Who Are We?          -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #sbs {
+    #war {
         background-color: #2E99CE;
         padding: var(--sectionPadding);
 
@@ -107,6 +107,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #reviews {
+        background-color: var(--bodyTextColorWhite);
         padding: var(--sectionPadding);
 
         .cs-container {
@@ -142,11 +143,16 @@
         }
 
         .cs-item {
+            border-radius: (5%);
+            padding: (16/16rem);
+            background-color: (#AFB8C2);
+            margin: (0/16rem) (10/16rem) (0/16rem) (0/16rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
             list-style: none;
             width: 100%;
             max-width: (413/16rem);
-            margin: 0;
-            padding: 0;
         }
 
         .cs-img {
@@ -184,16 +190,7 @@
             margin: auto;
             color: var(--bodyTextColor);
         }
-
-        .cs-button-solid {
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
+    }
 }
 
 /* Tablet - 768px */
@@ -217,10 +214,9 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #reviews-62 {
-            .cs-topper {
-                color: var(--primaryLight);
-            }
+        #reviews {
+            background-color: var(--dark);
+            
             .cs-title,
             .cs-text,
             .cs-name,
