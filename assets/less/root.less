@@ -1175,6 +1175,7 @@
 /* Small Desktop */
 @media only screen and (min-width: 64rem) {
     #cs-cta {
+        width: 100%;
         padding: (168/16rem) 0;
     }
 }
@@ -1251,11 +1252,7 @@
         /* 120px - 200px */
         padding-top: clamp(7.5rem, 15vw, 12.5rem);
         position: relative;
-
-        .cs-text {
-            width: 100%;
-            color: var(--bodyTextColorWhite);
-        }
+        background-color: var(--headerColor);
 
 
         .cs-container {
@@ -1290,6 +1287,7 @@
             &.dark {
                 display: none;
             }
+        
         } /* Navigation Links */
         .cs-nav {
             width: 100%;

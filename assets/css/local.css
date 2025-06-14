@@ -41,8 +41,6 @@
     text-align: left;
   }
   #war .cs-button-solid {
-    height: auto;
-    width: 12.5rem;
     color: var(--bodyTextColorWhite);
   }
 }
