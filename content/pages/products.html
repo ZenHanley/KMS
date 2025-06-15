@@ -1,33 +1,144 @@
 ---
-permalink: false
+title: 'Products & Services'
+description: 'Meta description for the page'
+permalink: 'products/'
 eleventyNavigation:
-    key: Products & Services
-    order: 300
+    key: Products
+    order: 200
 ---
 
-{# 
-    The starter kit uses the eleventy navigation plugin to render navigation items using data defined within the page,
-    making the navigation easy to control in larger projects.
-    https://www.11ty.dev/docs/plugins/navigation/
+{% extends "layouts/base.html" %}
 
-    In the starter kit, dropdowns are created by defining a "parent" in the eleventyNavigation frontmatter data of the child
-    page (see pages/project-one.html as an example).
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/products.css">
+{% endblock %}
 
-    To create the dropdown "parent", which gets rendered as a <span> (as opposed to an <a>) we need to create a blank HTML
-    file with the eleventyNavigation frontmatter defined, as shown in this example file.
+{% block body %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
 
-    Make sure the permalink is set to "false", which prevents a HTML file being made in /public and keeps this page from
-    being written to the sitemap.
-#}
+    <section id="int-hero">
+        <h1 id="home-h">Products</h1>
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="http://localhost:8080/assets/images/landing.jpg">
+            <source media="(min-width: 601px)" srcset="http://localhost:8080/assets/images/landing.jpg">
+            <img aria-hidden="true" decoding="async" src="http://localhost:8080/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
+        </picture>
+    </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+    </section>
+
+<!-- ============================================ -->
+<!--                   Steps                      -->
+<!-- ============================================ -->
+
+    <section id="steps">
+        <div class="cs-container">    
+            <div class="cs-content">
+                <h2 class="cs-title">Our Work Process</h2>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/lightbulb-red.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-title">Consultation</h3>
+                    <p class="cs-item-text">
+                        We will discuss your needs and requirements to understand your business better.
+                    </p>
+                </li>
+
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/puzzle-red.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-title">Prepare Solution</h3>
+                    <p class="cs-item-text">
+                        We will create a tailored solution that fits your specific needs and goals.
+                    </p>
+                </li>
+
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/gears-red.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-title">Implementation</h3>
+                    <p class="cs-item-text">
+                        We will implement the solution with a focus on quality and functionality.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+<!-- ============================================ -->
+<!--                  Products                    -->
+<!-- ============================================ -->
+
+<section id="products">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            
+            <li class="cs-item">
+                <a href="/contact">
+                <h3 class="cs-title">Business Signage - Interior and Exterior</h3>
+                </a>
+            </li>
+
+            <li class="cs-item">
+                <a href="/contact">
+                <h3 class="cs-title">Banners & Posters</h3>
+                </a>
+            </li>
+
+            <li class="cs-item">
+                <a href="/contact">
+                <h3 class="cs-title">Magnetic Signs</h3>
+                </a>
+            </li>
+
+            <li class="cs-item">
+                <a href="/contact">
+                <h3 class="cs-title">Decals & Vinyl Lettering</h3>
+                </a>
+            </li>
+
+            <li class="cs-item">
+                <a href="/contact">
+                <h3 class="cs-title">H-Frame and A-Frame Signs</h3>
+                </a>
+            </li>
+
+            <li class="cs-item">
+                <a href="/contact">
+                <h3 class="cs-title">Vehicle Lettering, Graphics, and Pinstripes</h3>
+                </a>
+            </li>
+
+            <li class="cs-item">
+                <a href="/contact">
+                <h3 class="cs-title">Window Graphics</h3>
+                </a>
+            </li>
+
+            <li class="cs-item">
+                <a href="/contact">
+                <h3 class="cs-title">Custom Rubber Stamps</h3>
+                </a>
+            </li>
+
+            <li class="cs-item">
+                <a href="/contact">
+                <h3 class="cs-title">Printing Services</h3>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}

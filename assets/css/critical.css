@@ -102,11 +102,14 @@
   #Hero {
     padding: 9.375rem 0.9375rem 0 0.9375rem;
   }
+  #Hero .cs-button-solid {
+    font-size: clamp(1.5rem, 6.7vw, 1rem);
+  }
   #Hero .cs-title {
-    font-size: clamp(5rem, 6.7vw, 3.5rem);
+    font-size: clamp(2.5rem, 6.7vw, 3.5rem);
   }
   #Hero .cs-text {
-    font-size: clamp(2.5rem, 6.7vw, 1rem);
+    font-size: clamp(1.5rem, 6.7vw, 1rem);
   }
   #Hero .cs-content {
     width: 50%;

@@ -73,7 +73,7 @@
   }
 }
 /*-- -------------------------- -->
-<---          Reviews           -->
+<---         Testimonials       -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -113,7 +113,7 @@
   #reviews .cs-item {
     border-radius: 5%;
     padding: 1rem;
-    background-color: #AFB8C2;
+    background-color: #e2e6ea;
     margin: 0rem 0.625rem 0rem 0rem;
     display: flex;
     flex-direction: column;
@@ -173,13 +173,6 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode #reviews {
     background-color: var(--dark);
-  }
-  body.dark-mode #reviews .cs-title,
-  body.dark-mode #reviews .cs-text,
-  body.dark-mode #reviews .cs-name,
-  body.dark-mode #reviews .cs-desc,
-  body.dark-mode #reviews .cs-item-text {
-    color: var(--bodyTextColorWhite);
   }
   body.dark-mode #reviews .cs-item-text,
   body.dark-mode #reviews .cs-text {
