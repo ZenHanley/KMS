@@ -1073,13 +1073,13 @@
     position: relative;
   }
   #cs-footer .cs-logo {
-    width: 12.3125rem;
+    width: 8.125rem;
     height: auto;
     display: block;
-    margin-bottom: 1.5rem;
   }
   #cs-footer .cs-logo-img {
-    width: 100%;
+    align-self: flex-start;
+    padding: 0;
     height: auto;
   }
   #cs-footer .cs-logo-img.dark {
